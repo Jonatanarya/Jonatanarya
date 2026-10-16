@@ -1,1 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06080e" />
+      <stop offset="50%" stop-color="#0a0f18" />
+      <stop offset="100%" stop-color="#080711" />
+    </linearGradient>
 
+    <linearGradient id="emeraldViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff9d" />
+      <stop offset="55%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <radialGradient id="radarGlow" cx="84%" cy="52%" r="40%">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.16" />
+      <stop offset="55%" stop-color="#a855f7" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#06080e" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .win-title { font: 600 11px 'JetBrains Mono', Consolas, monospace; fill: #64748b; letter-spacing: 1px; }
+    .status { font: 700 10px 'JetBrains Mono', Consolas, monospace; fill: #00ff9d; letter-spacing: 1.5px; }
+    .handle { font: 800 44px 'JetBrains Mono', 'Fira Code', Consolas, monospace; fill: #00ff9d; letter-spacing: 1.5px; }
+    .role { font: 700 12.5px 'Segoe UI', Roboto, sans-serif; fill: #f1f5f9; letter-spacing: 4px; }
+    .subrole { font: 600 9.5px 'JetBrains Mono', Consolas, monospace; fill: #a855f7; letter-spacing: 2.5px; }
+    .code-kw { font: 500 11.5px 'JetBrains Mono', Consolas, monospace; fill: #c084fc; }
+    .code-fn { font: 500 11.5px 'JetBrains Mono', Consolas, monospace; fill: #00ff9d; }
+    .code-str { font: 400 11.5px 'JetBrains Mono', Consolas, monospace; fill: #94a3b8; }
+    .code-cm { font: 400 11px 'JetBrains Mono', Consolas, monospace; fill: #475569; }
+    .prompt { font: 700 12px 'JetBrains Mono', Consolas, monospace; fill: #00ff9d; }
+    .mod-num { font: 800 10px 'JetBrains Mono', Consolas, monospace; fill: #a855f7; }
+    .mod-title { font: 700 9px 'Segoe UI', Roboto, sans-serif; fill: #e2e8f0; letter-spacing: 1.2px; }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .cursor { animation: blink 1s infinite; fill: #00ff9d; }
+    .pulse-fast { animation: pulse 2.2s ease-in-out infinite; }
+    .pulse-slow { animation: pulse 4s ease-in-out infinite; }
+  </style>
+
+  <!-- Main Cyber Terminal Frame -->
+  <rect x="10" y="10" width="980" height="310" rx="10" fill="url(#bg)" stroke="#1e293b" stroke-width="2" />
+  <rect x="10" y="10" width="980" height="310" rx="10" fill="url(#radarGlow)" />
+
+  <!-- Top Terminal Header Bar -->
+  <path d="M 10 20 Q 10 10 20 10 L 980 10 Q 990 10 990 20 L 990 42 L 10 42 Z" fill="#0d131f" />
+  <line x1="10" y1="42" x2="990" y2="42" stroke="#1e293b" stroke-width="1.5" />
+  <line x1="10" y1="42" x2="450" y2="42" stroke="url(#emeraldViolet)" stroke-width="2" />
+
+  <!-- Window Dots -->
+  <circle cx="32" cy="26" r="5.5" fill="#ef4444" />
+  <circle cx="50" cy="26" r="5.5" fill="#f59e0b" />
+  <circle cx="68" cy="26" r="5.5" fill="#10b981" />
+  <text x="92" y="30" class="win-title">root@0xarsant:~/sec-ai-core — zsh</text>
+
+  <!-- Right Status Indicator -->
+  <circle cx="818" cy="26" r="4" fill="#00ff9d" class="pulse-fast" filter="url(#neonGlow)" />
+  <text x="830" y="30" class="status">[AGENT: AUTONOMOUS]</text>
+
+  <!-- Background Matrix Grid -->
+  <g stroke="#1e293b" stroke-width="0.6" opacity="0.35">
+    <line x1="10" y1="100" x2="990" y2="100" />
+    <line x1="10" y1="160" x2="990" y2="160" />
+    <line x1="10" y1="220" x2="990" y2="220" />
+    <line x1="10" y1="280" x2="990" y2="280" />
+    <line x1="250" y1="42" x2="250" y2="320" />
+    <line x1="500" y1="42" x2="500" y2="320" />
+    <line x1="750" y1="42" x2="750" y2="320" />
+  </g>
+
+  <!-- LEFT: Cyber Shield Emblem & Identity -->
+  <g transform="translate(52, 74)">
+    <path d="M38,0 L76,16 L76,48 C76,74 58,92 38,100 C18,92 0,74 0,48 L0,16 Z" fill="#0b1320" stroke="#00ff9d" stroke-width="2.5" filter="url(#neonGlow)" />
+    <path d="M38,8 L68,21 L68,47 C68,68 53,83 38,90 C23,83 8,68 8,47 L8,21 Z" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="5 3" />
+    <text x="38" y="57" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-weight="800" font-size="22" fill="#f8fafc">&gt;_</text>
+
+    <line x1="98" y1="6" x2="98" y2="96" stroke="url(#emeraldViolet)" stroke-width="2.5" />
+
+    <text x="118" y="45" class="handle" filter="url(#neonGlow)">0xarsant</text>
+    <text x="120" y="70" class="role">SECURITY RESEARCHER</text>
+    <text x="120" y="90" class="subrole">[ AI AGENTS • OFFENSIVE SEC • OPEN SOURCE ]</text>
+  </g>
+
+  <!-- CENTER: Autonomous Security Agent Code Block -->
+  <g transform="translate(505, 76)">
+    <text x="0" y="0" class="code-cm"># autonomous_hunter.py</text>
+    <text x="0" y="18" class="code-kw">class <tspan class="code-fn">SecAgent</tspan><tspan class="code-str">(Autonomous):</tspan></text>
+    <text x="16" y="36" class="code-kw">def <tspan class="code-fn">execute</tspan><tspan class="code-str">(self, target):</tspan></text>
+    <text x="32" y="54" class="code-str">self.recon_and_audit(target)</text>
+    <text x="32" y="72" class="code-str">self.deploy_ai_swarm()</text>
+    <text x="32" y="90" class="code-kw">return <tspan class="code-fn">"ZERO_DAY_PATCHED"</tspan></text>
+
+    <text x="0" y="120" class="prompt">0xarsant@lab:~$ <tspan fill="#e2e8f0">./run_agent --stealth</tspan></text>
+    <rect x="268" y="108" width="8" height="14" class="cursor" />
+  </g>
+
+  <!-- RIGHT: Animated Cyber Radar & Neural Nodes -->
+  <g transform="translate(865, 165)">
+    <circle cx="0" cy="0" r="96" fill="#060a12" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="96" fill="none" stroke="#00ff9d" stroke-width="1.2" stroke-dasharray="6 10" opacity="0.6" />
+    <circle cx="0" cy="0" r="66" fill="none" stroke="#a855f7" stroke-width="0.9" stroke-dasharray="4 6" opacity="0.45" />
+    <circle cx="0" cy="0" r="36" fill="none" stroke="#00ff9d" stroke-width="0.8" opacity="0.35" />
+
+    <line x1="-96" y1="0" x2="96" y2="0" stroke="#00ff9d" stroke-width="0.5" opacity="0.25" />
+    <line x1="0" y1="-96" x2="0" y2="96" stroke="#00ff9d" stroke-width="0.5" opacity="0.25" />
+
+    <g stroke="#a855f7" stroke-width="0.9" opacity="0.55">
+      <line x1="-45" y1="-40" x2="20" y2="-55" />
+      <line x1="20" y1="-55" x2="55" y2="-15" />
+      <line x1="55" y1="-15" x2="25" y2="45" />
+      <line x1="25" y1="45" x2="-40" y2="35" />
+      <line x1="-40" y1="35" x2="-45" y2="-40" />
+      <line x1="-45" y1="-40" x2="0" y2="0" />
+      <line x1="55" y1="-15" x2="0" y2="0" />
+      <line x1="25" y1="45" x2="0" y2="0" />
+    </g>
+
+    <g>
+      <line x1="0" y1="0" x2="0" y2="-94" stroke="#00ff9d" stroke-width="2" filter="url(#neonGlow)" />
+      <polygon points="0,0 0,-94 -38,-86" fill="#00ff9d" opacity="0.15" />
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="6s" repeatCount="indefinite" />
+    </g>
+
+    <circle cx="0" cy="0" r="4.5" fill="#00ff9d" filter="url(#neonGlow)" />
+    <circle cx="-45" cy="-40" r="3.5" fill="#00ff9d" class="pulse-fast" />
+    <circle cx="20" cy="-55" r="3" fill="#a855f7" class="pulse-slow" />
+    <circle cx="55" cy="-15" r="3.5" fill="#00ff9d" class="pulse-fast" />
+    <circle cx="25" cy="45" r="3" fill="#a855f7" />
+    <circle cx="-40" cy="35" r="3.5" fill="#00ff9d" class="pulse-slow" />
+  </g>
+
+  <!-- BOTTOM: 3 Rectangular HUD Telemetry Modules -->
+  <g transform="translate(52, 232)">
+    <polygon points="0,0 205,0 215,10 215,48 10,48 0,38" fill="#0b111e" stroke="#00ff9d" stroke-width="1.2" opacity="0.9" />
+    <rect x="0" y="0" width="4" height="38" fill="#00ff9d" />
+    <text x="16" y="19" class="mod-num">[01] // OFFENSIVE SEC</text>
+    <text x="16" y="35" class="mod-title">VULN RESEARCH &amp; PENTEST</text>
+  </g>
+
+  <g transform="translate(285, 232)">
+    <polygon points="0,0 205,0 215,10 215,48 10,48 0,38" fill="#0b111e" stroke="#a855f7" stroke-width="1.2" opacity="0.9" />
+    <rect x="0" y="0" width="4" height="38" fill="#a855f7" />
+    <text x="16" y="19" class="mod-num" fill="#00ff9d">[02] // NEURAL CORE</text>
+    <text x="16" y="35" class="mod-title">AUTONOMOUS AI AGENTS</text>
+  </g>
+
+  <g transform="translate(518, 232)">
+    <polygon points="0,0 205,0 215,10 215,48 10,48 0,38" fill="#0b111e" stroke="#00ff9d" stroke-width="1.2" opacity="0.9" />
+    <rect x="0" y="0" width="4" height="38" fill="#00ff9d" />
+    <text x="16" y="19" class="mod-num">[03] // ARCHITECTURE</text>
+    <text x="16" y="35" class="mod-title">SELF-HOSTED &amp; BYOK</text>
+  </g>
+</svg>
