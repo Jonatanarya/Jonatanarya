@@ -5,9 +5,9 @@
 
   <br /><br />
 
-  <!-- TYPING SVG (TANPA TYPO) -->
+  <!-- TYPING SVG (BERSIH TANPA KURUNG SIKU) -->
   <a href="https://github.com/Jonatanarya">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2800&pause=1000&color=00FF9D&center=true&vCenter=true&width=700&lines=%5B0xarsant%5D+Individual+Security+Researcher+%26+AI+Agent+Enthusiast;%3E+Autonomous+AI+Swarms+%E2%80%A2+Offensive+Security+%E2%80%A2+Privacy-First;%3E+Break+Systems.+Build+Agents.+Open+Source+Everything." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2800&pause=1000&color=00FF9D&center=true&vCenter=true&width=700&lines=0xarsant+%E2%80%A2+Security+Researcher+%26+AI+Agent+Enthusiast;%3E+Autonomous+AI+Swarms+%E2%80%A2+Offensive+Security;%3E+Break+Systems.+Build+Agents.+Open+Source." alt="Typing SVG" />
   </a>
 
   <br />
