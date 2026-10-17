@@ -17,7 +17,7 @@
     <a href="https://github.com/Jonatanarya">
       <img src="https://img.shields.io/badge/HANDLE-0XARSANT-00FF9D?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="0xarsant" />
     </a>
-    <a href="https://t.me/username_anda">
+    <a href="https://t.me/synj0">
       <img src="https://img.shields.io/badge/TELEGRAM-0XARSANT-A855F7?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0D1117" alt="Telegram" />
     </a>
     <a href="https://github.com/Jonatanarya?tab=repositories">
